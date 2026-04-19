@@ -23,11 +23,30 @@ Bu uygulama o bilgileri dosyadan temizler.
 
 Python 3.10 veya üzeri gereklidir.
 
+### 1. Depoyu indirin
+
 ```bash
-pip install rich Pillow mutagen pikepdf python-docx
+git clone https://github.com/vvv8872/Metadatasilici.git
+cd Metadatasilici
+```
+
+### 2. Kütüphaneleri yükleyin
+
+```bash
+pip install -r requirements.txt
 ```
 
 Tüm kütüphaneleri kurmak zorunda değilsiniz. Sadece kullanacağınız formata ait olanı kurmanız yeterlidir. `rich` kütüphanesi zorunludur, diğerleri isteğe bağlıdır.
+
+**Tek tek kurmak isterseniz:**
+
+```bash
+pip install rich          # Zorunlu — arayüz için
+pip install Pillow        # Resim desteği için
+pip install mutagen       # Ses desteği için
+pip install pikepdf       # PDF desteği için
+pip install python-docx   # DOCX desteği için
+```
 
 ---
 
@@ -72,9 +91,6 @@ C:\Kullanicilar\Ali\Masaustu\fotograf.jpg
 
 ## Sorun Giderme
 
-**`git` veya `python` tanınmıyor hatası**
-Programı yükledikten sonra terminali kapatıp yeniden açın.
-
 **Belirli bir format çalışmıyor**
 Uygulama açılışında kütüphane durumu tablosunu kontrol edin. Eksik olanı kurun:
 ```bash
@@ -88,6 +104,12 @@ pip install python-docx
 Dosya adında boşluk varsa yolu tırnak içine alın:
 ```
 "C:\Kullanicilar\Ali\tatil foto.jpg"
+```
+
+**pikepdf kurulum hatası (Linux)**
+```bash
+sudo apt install libqpdf-dev
+pip install pikepdf
 ```
 
 ---
